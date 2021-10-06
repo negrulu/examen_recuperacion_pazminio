@@ -80,9 +80,11 @@ public class Main {
 					socioEsporadico1.setCodigoEsporadico(codigoEsporadico);
 					System.out.println("Ingrese su actividad preferida: ");
 					String actividadPreferida = entradaCaracter.nextLine();
+					socioEsporadico1.setActividadPreferida(actividadPreferida);
 				break;
 				//vip
 				case 'c':
+					System.out.println("Ingrese ");
 				break;
 				}
 				
