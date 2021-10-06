@@ -1,6 +1,8 @@
 package examen.recuperacion.pazminio;
 import java.util.Scanner;
 
+import proyecto.suspension.Estudiante;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -84,14 +86,34 @@ public class Main {
 				break;
 				//vip
 				case 'c':
-					System.out.println("Ingrese ");
+					System.out.println("Ingrese el codigo vip: ");
+					String codigoVip = entradaCaracter.nextLine();
+					socioVip1.setCodigoVip(codigoVip);
+					System.out.println("Ingrese su fecha de cumpleaños: ");
+					String fechaCumpleaños = entradaCaracter.nextLine();
+					socioVip1.setFechaCumpleaños(fechaCumpleaños);
 				break;
 				}
 				
 			break;
 			
 			case 2:
+				System.out.println("Ingrese el codigo de membresia para busar al socio: ");
+				String codigoBuscar = entradaCaracter.nextLine();
 				
+				for (int i = 0; i < socios.length; i++) {
+					Socio busquedaSocio= socios[i];
+					
+					boolean buscar = busquedaSocio.getCodigoMembresia().equals(codigoBuscar);
+
+					if (buscar == true) {
+						System.out.println("Se ha encontrado al socio");
+						System.out.println("El socio que se encontro tiene los siguientes datos");
+						System.out.println("Codigo membresia: "+socios[i].getCodigoMembresia());
+						
+
+					}				
+				}
 			break;
 			
 			case 3:
